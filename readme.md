@@ -45,7 +45,8 @@ A simple, user-friendly desktop app to download entire YouTube playlists in **MP
 4. **Run the app**
 
    ```bash
-   python playlist_downloader.py
+   python youtube.py
+   python playlist_yt.py
    ```
 
 ---
