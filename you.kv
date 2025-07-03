@@ -1,0 +1,69 @@
+<YouTubeDownloader>:
+    orientation: "vertical"
+    spacing: 15
+    padding: 20
+
+    Label:
+        text: "YouTube URL:"
+        font_size: 18
+        color: 0, 0, 0, 1
+
+    TextInput:
+        id: url_input
+        multiline: False
+        size_hint_y: None
+        height: 40
+        font_size: 16
+        background_color: 1, 1, 1, 1
+        foreground_color: 0, 0, 0, 1
+
+    BoxLayout:
+        size_hint_y: None
+        height: 40
+        spacing: 10
+
+        ToggleButton:
+            id: mp4_btn
+            text: "MP4"
+            group: "format"
+            state: "down"
+            background_color: 0.2, 0.6, 1, 1
+            color: 1, 1, 1, 1
+
+        ToggleButton:
+            id: mp3_btn
+            text: "MP3"
+            group: "format"
+            background_color: 0.2, 0.6, 1, 1
+            color: 1, 1, 1, 1
+
+    Button:
+        text: "Fetch Resolutions"
+        size_hint_y: None
+        height: 45
+        background_color: 0.3, 0.7, 0.3, 1
+        color: 1, 1, 1, 1
+
+    Label:
+        text: "Select Resolution:"
+        font_size: 18
+        color: 0, 0, 0, 1
+
+    Spinner:
+        id: res_spinner
+        text: "Select Resolution"
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+
+    Button:
+        text: "Download"
+        size_hint_y: None
+        height: 50
+        background_color: 0.8, 0.1, 0.1, 1
+        color: 1, 1, 1, 1
+
+    Label:
+        id: status_label
+        text: root.status
+        color: 0, 0, 0, 1
+        font_size: 16

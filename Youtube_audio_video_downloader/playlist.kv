@@ -1,0 +1,52 @@
+<PlaylistDownloader>:
+    orientation: "vertical"
+    spacing: 15
+    padding: 20
+
+    Label:
+        text: "YouTube Playlist URL:"
+        font_size: 18
+
+    TextInput:
+        id: url_input
+        multiline: False
+        size_hint_y: None
+        height: 40
+        font_size: 16
+
+    Label:
+        text: "Output Folder Name:"
+        font_size: 18
+
+    TextInput:
+        id: folder_input
+        multiline: False
+        size_hint_y: None
+        height: 40
+        font_size: 16
+
+    BoxLayout:
+        size_hint_y: None
+        height: 40
+        spacing: 10
+
+        ToggleButton:
+            id: mp4_btn
+            text: "MP4"
+            group: "format"
+            state: "down"
+
+        ToggleButton:
+            id: mp3_btn
+            text: "MP3"
+            group: "format"
+
+    Button:
+        text: "Download Playlist"
+        size_hint_y: None
+        height: 50
+
+    Label:
+        id: status_label
+        text: root.status
+        font_size: 16
